@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    This is a test
+    <script>
+      var socket = io.connect();
+      socket.on('date', function(data){
+        console.log(data.date);
+      });
+    </script>
+  </body>
+</html>
