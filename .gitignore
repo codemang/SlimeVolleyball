@@ -39,3 +39,6 @@ jspm_packages
 
 # From babel
 dist
+
+# webpack bundles
+build

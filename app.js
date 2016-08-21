@@ -3,6 +3,8 @@ import http    from 'http';
 import io      from 'socket.io';
 import UUID    from 'node-uuid';
 
+let PORT = 1337;
+
 // Use app as the handler for an http rqeuest
 let app = express();
 
@@ -20,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 // Listen on the 'connection' event
-listener.sockets.on('connection', (socket) => {
+listener.on('connection', (socket) => {
 	console.log("Client connected...");
 
   setInterval(() => {
@@ -28,4 +30,6 @@ listener.sockets.on('connection', (socket) => {
   }, 1000);
 });
 
-server.listen(1337);
+server.listen(PORT, () => {
+  console.log('Server listening on PORT ' + PORT);
+});

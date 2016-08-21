@@ -9,11 +9,10 @@ Running `setup.sh` will run some basic npm commands to get your development envi
 
 `link.md` contains some helpful links in getting up to speed with node, express, socket-io, networked game development, etc.
 
-Run `npm start` to run the server locally.
+For development, run in one window `npm start` and in a second window `npm run devServer`.
 
-To build in production do
+To build for production run 
 
 ```
-npm run build
 npm run serve
 ```
