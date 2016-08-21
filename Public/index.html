@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./lib/game_core.js"></script>
+    </head>
+
+    <body>
+        <canvas id='game-canvas'>
+        </canvas>
+        <script>
+            const opts = {  }
+            // let game = new GameCore(opts)
+            // var canvas = document.createElement("canvas");
+            // var ctx = canvas.getContext("2d");
+            // canvas.width = 512;
+            // canvas.height = 480;
+            //
+            // var height = 500;
+            // // Background color
+            // ctx.fillStyle = "#FF0000";
+            // ctx.fillRect(0,0,height,height);
+            // document.body.appendChild(canvas);
+            //
+            // // ball
+            // radius = 20;
+            // ctx.beginPath();
+            // ctx.arc(radius, height - 2 * radius, radius, 0, 2 * Math.PI, false);
+            // ctx.fillStyle = 'green';
+            // ctx.fill();
+            //
+            // // The main game loop
+            // var lastTime;
+            // function main() {
+            //   var now = Date.now();
+            //   var dt = (now - lastTime) / 1000.0;
+            //
+            //   update(dt);
+            //   render();
+            //
+            //   lastTime = now;
+            //   requestAnimFrame(main);
+            // 
+            var socket = io.connect();
+            socket.on('date', function(data){
+            console.log(data.date);
+
+            });
+        </script>
+    </body>
+</html>

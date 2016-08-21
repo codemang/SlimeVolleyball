@@ -4,7 +4,11 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   devtool: 'source-map',
-  entry: __dirname + '/client/app.js',
+  entry:  [
+    __dirname + '/client/app.js',
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:3000'
+  ],
   output: {
     path: __dirname + '/build',
     filename: 'app.bundle.js',
@@ -21,6 +25,10 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ["style", "css", "sass"]
       },
+      {
+          test: /\.json$/,
+          loader: 'json'
+      }
     ]
   },
   plugins: [

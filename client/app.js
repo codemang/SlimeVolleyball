@@ -1,8 +1,22 @@
-import React from "react"
-import {render} from "react-dom"
-import Layout from "./components/layout.js"
+//npm package imports
+import React from "react";
+import { Provider } from 'react-redux';
+import ReactDOM from "react-dom"
 import sio from "socket.io-client";
+
+import SmartLayout from "./containers/smart_layout.js";
+import configureStore from './store/configureStore';
 
 let socket = sio('http://localhost:8080');
 
-render(<Layout socket={socket} />, document.getElementById("root"));
+let store = configureStore({
+    ...require('./store/preloadedState.json'),
+    socket
+})
+
+ReactDOM.render(
+    <Provider store={store}>
+        <SmartLayout /> 
+    </Provider>, 
+    document.getElementById("root")
+);
