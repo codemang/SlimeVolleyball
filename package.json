@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "babel-node ./server.js",
+    "start": "babel-node ./server/server.js",
     "build": "babel lib -d dist",
     "devServer": "webpack-dev-server --progress",
     "build-prod": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress",
@@ -37,6 +37,7 @@
     "socket.io-client": "^1.4.8",
     "style-loader": "0.13.1",
     "webpack": "1.13.1",
+    "webpack-dashboard": "0.1.7",
     "webpack-dev-server": "1.14.1"
   },
   "devDependencies": {

@@ -5,8 +5,6 @@ module.exports = {
   devtool: 'source-map',
   entry:  [
     __dirname + '/client/app.js',
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:3000'
   ],
   output: {
     path: __dirname + '/build',

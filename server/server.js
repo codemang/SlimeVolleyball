@@ -1,10 +1,7 @@
-import webpack from 'webpack';
-import webpackDevServer from 'webpack-dev-server';
-import config from './webpack.config.js';
 import path from 'path';
 import http from 'http';
 import express from 'express';
-import GameCore from './lib/game_core';
+import GameCore from '../lib/game_core';
 
 const SERVER_PORT = 8080;
 
