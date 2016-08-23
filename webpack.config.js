@@ -1,5 +1,6 @@
-var webpack = require('webpack');
-var html    = require('html-webpack-plugin');
+var webpack         = require('webpack');
+var html            = require('html-webpack-plugin');
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -26,7 +27,8 @@ module.exports = {
   },
   plugins: [
     new html({template: __dirname + '/client/index.tmpl.html'}),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new DashboardPlugin(),
   ],
   devServer: {
     contentBase: __dirname + '/build',

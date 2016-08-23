@@ -6,7 +6,7 @@
   "scripts": {
     "start": "babel-node ./server/server.js",
     "build": "babel lib -d dist",
-    "devServer": "webpack-dev-server --progress",
+    "devServer": "webpack-dashboard webpack-dev-server --progress",
     "build-prod": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress",
     "serve": "npm run build-prod && npm run server"
   },
