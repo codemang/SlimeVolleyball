@@ -4,9 +4,7 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   devtool: 'source-map',
-  entry:  [
-    __dirname + '/client/app.js',
-  ],
+  entry: __dirname + '/client/app.js',
   output: {
     path: __dirname + '/build',
     filename: 'app.bundle.js',
@@ -35,11 +33,6 @@ module.exports = {
     hot: true,
     inline: true,
     colors: true,
-    proxy: {
-        //Specify any requests on the /socket.io path to be
-        //routed to the HTTP server created above
-        '/socket.io': `http://localhost:${8080}`
-    },
     port: 3000
   }
 }

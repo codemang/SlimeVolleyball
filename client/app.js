@@ -3,6 +3,6 @@ import {render} from "react-dom"
 import Layout from "./components/layout.js"
 import sio from "socket.io-client";
 
-let socket = sio();
+let socket = sio('http://localhost:8080');
 
 render(<Layout socket={socket} />, document.getElementById("root"));
