@@ -1,4 +1,5 @@
 {
     "socket": {},
-    "menu_options": []
+    "menu_options": [],
+    "view": "main_lobby"
 }

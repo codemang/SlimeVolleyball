@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import ReactDOM from "react-dom"
 import sio from "socket.io-client";
 
-import SmartLayout from "./containers/smart_layout.js";
+import SmartView from "./containers/smart_view";
 import configureStore from './store/configureStore';
 
 let socket = sio('http://localhost:8080');
@@ -16,7 +16,7 @@ let store = configureStore({
 
 ReactDOM.render(
     <Provider store={store}>
-        <SmartLayout /> 
+        <SmartView /> 
     </Provider>, 
     document.getElementById("root")
 );

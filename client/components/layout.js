@@ -1,6 +1,5 @@
 import React from "react"
 
-import "../stylesheets/main.scss"
 import GameCore from "../../lib/game_core.js"
 import SmartMainLobby from '../containers/smart_main_lobby';
 
@@ -12,7 +11,11 @@ class Layout extends React.Component {
     }
 
     props.socket.on('connection_successful', (data) => {
-        this.props.setMenuOptions(data.menu_options);  
+      console.log("CLIENT: connection to server successful");
+      this.props.setMenuOptions(data.menu_options);  
+    });
+    props.socket.on('join_successful', (data) => {
+      console.log(data);
     });
   }
 
