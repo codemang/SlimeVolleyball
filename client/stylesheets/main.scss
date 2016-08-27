@@ -1,13 +1,42 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
 .nav-bar {
   width: 100%;
   background-color: black;
 }
 
+.menu-option {
+    font-family: sans-serif;
+    text-align: center;
+    width:200px;
+    padding:15px;
+    margin: 10px 0;
+    border-radius:3px;
+}
+
 .active-menu-option {
+    background-color: #00c2ff;
     cursor: pointer;
+    color:white;
 }
 
 .inactive-menu-option {
     color: gray;
     font-style: italic;
+    background-color:#c3c1c1;
+}
+
+#left-panel {
+    width:230px;
+    padding:10px;
+}
+
+#game-activity-monitor {
+    background-color: #ececec;
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    height: 350px;
 }

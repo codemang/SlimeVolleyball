@@ -13,7 +13,7 @@ class View extends React.Component {
         props.socket.on('join_successful', data => {
             console.log(data);
             this.props.setView('game');
-        })
+        });
     }
 
     getView() {

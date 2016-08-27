@@ -1,12 +1,9 @@
 import {connect} from 'react-redux';
-import MainLobby from '../components/main_lobby.js';
+import MainLobby from '../components/main_lobby';
 import {setView} from '../actions/view';
 
 function mapStateToProps(state) {
-    return {
-        menu_options: state.menu_options,
-        socket: state.socket
-    }
+    return {}
 }
 
 function mapDispatchToProps(dispatch) {
