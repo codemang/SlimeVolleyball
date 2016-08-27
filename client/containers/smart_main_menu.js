@@ -3,14 +3,14 @@ import MainMenu from '../components/main_menu';
 import {setView} from '../actions/view';
 
 function mapStateToProps(state) {
-    return {
-        menu_options: state.menu_options,
-        socket: state.socket
-    }
+  return {
+    menu_options: state.menu_options,
+    socket: state.socket
+  }
 }
 
 function mapDispatchToProps(dispatch) {
-    return {}
+  return {}
 }
 
 let SmartMainMenu = connect(mapStateToProps, mapDispatchToProps)(MainMenu);

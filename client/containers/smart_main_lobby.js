@@ -3,11 +3,11 @@ import MainLobby from '../components/main_lobby';
 import {setView} from '../actions/view';
 
 function mapStateToProps(state) {
-    return {}
+  return {}
 }
 
 function mapDispatchToProps(dispatch) {
-    return {}
+  return {}
 }
 
 let SmartMainLobby = connect(mapStateToProps, mapDispatchToProps)(MainLobby);

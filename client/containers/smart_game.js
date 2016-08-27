@@ -2,11 +2,11 @@ import {connect} from 'react-redux';
 import Game from '../components/game';
 
 function mapStateToProps(state) {
-    return {}
+  return {}
 }
 
 function mapDispatchToProps(dispatch) {
-    return {}
+  return {}
 }
 
 let SmartGame = connect(mapStateToProps, mapDispatchToProps)(Game);
