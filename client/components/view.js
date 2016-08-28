@@ -6,15 +6,6 @@ import "../stylesheets/main.scss";
 class View extends React.Component {
   constructor(props) {
     super(props);
-    props.socket.on('connection_successful', (data) => {
-      console.log("CLIENT: connection to server successful");
-      this.props.setMenuOptions(data.menu_options);
-    });
-    props.socket.on('join_successful', data => {
-      // this.props.setGameId(data.game_id);
-      // this.props.setUserId(data.user_id);
-      this.props.setView('game');
-    });
   }
 
   getView() {

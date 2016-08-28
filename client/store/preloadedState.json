@@ -1,5 +1,6 @@
 {
   "socket": {},
   "menu_options": [],
-  "view": "main_lobby"
+  "view": "main_lobby",
+  "game": {}
 }

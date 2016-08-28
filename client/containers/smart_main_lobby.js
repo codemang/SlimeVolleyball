@@ -1,13 +1,17 @@
 import {connect} from 'react-redux';
 import MainLobby from '../components/main_lobby';
-import {setView} from '../actions/view';
+import {setMenuOptions} from '../actions/menu_options';
 
 function mapStateToProps(state) {
   return {}
 }
 
 function mapDispatchToProps(dispatch) {
-  return {}
+  return {
+    setMenuOptions: (menu_options) => {
+      dispatch(setMenuOptions(menu_options));
+    },
+  }
 }
 
 let SmartMainLobby = connect(mapStateToProps, mapDispatchToProps)(MainLobby);

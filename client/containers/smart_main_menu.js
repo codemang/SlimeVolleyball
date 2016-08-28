@@ -10,7 +10,11 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {}
+  return {
+    setView: (view) => {
+      dispatch(setView(view));
+    }
+  }
 }
 
 let SmartMainMenu = connect(mapStateToProps, mapDispatchToProps)(MainMenu);

@@ -35,6 +35,11 @@ module.exports = {
     new html({template: __dirname + '/client/index.tmpl.html'}),
     new webpack.HotModuleReplacementPlugin(),
     new DashboardPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    })
   ],
   devServer: {
     contentBase: __dirname + '/build',

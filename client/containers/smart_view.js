@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
 import View from '../components/view';
-import {setMenuOptions} from '../actions/menu_options';
 import {setView} from '../actions/view';
 
 function mapStateToProps(state) {
@@ -12,16 +11,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    setMenuOptions: (menu_options) => {
-      dispatch(setMenuOptions(menu_options));
-    },
     setView: (view) => {
-      dispatch(setView(view));
-    },
-    setGameId: (view) => {
-      dispatch(setView(view));
-    },
-    setUserId: (view) => {
       dispatch(setView(view));
     },
   }

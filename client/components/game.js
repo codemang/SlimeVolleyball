@@ -5,13 +5,21 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      game_core: new GameCore()
+      game_core: new GameCore(),
+      canvas: {
+        width: 800,
+        height: 480
+      }
     }
+  }
+
+  componentDidMount() {
+    this.state.game_core.initialize(`http://localhost:8080`);
   }
 
   render() {
     return (
-      <div>Game View</div>
+      <canvas id="game-canvas" ref='canvas' width={this.state.canvas.width} height={this.state.canvas.height}></canvas>
     )
   }
 }

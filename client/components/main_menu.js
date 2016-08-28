@@ -1,4 +1,5 @@
 import React from 'react';
+import {routes} from '../utilities/routes';
 
 class MainMenu extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class MainMenu extends React.Component {
     console.log('Clicked option: ' + selected_option);
     switch(selected_option) {
       case 'online':
-        this.props.socket.emit('attempt_join', {});
+        this.props.setView('game');
         break;
       case 'local':
       case 'instructions':
