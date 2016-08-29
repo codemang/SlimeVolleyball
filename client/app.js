@@ -5,6 +5,7 @@ import ReactDOM from "react-dom"
 
 import SmartView from "./containers/smart_view";
 import configureStore from './store/configureStore';
+import './utilities/window';
 
 let store = configureStore({
     ...require('./store/preloadedState.json'),
