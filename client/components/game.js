@@ -15,6 +15,7 @@ class Game extends React.Component {
 
   componentDidMount() {
     this.state.game_core.initializePlayer(`http://localhost:8080`);
+    // this.state.game_core.client_gameLoop();
   }
 
   render() {
